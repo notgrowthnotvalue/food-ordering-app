@@ -58,3 +58,12 @@ body {
     display: block;
     width: 300px;
 }
+
+.order {
+    font-size: 28px;
+    width: 508px;
+}
+
+#order-title {
+    text-align: center;
+}

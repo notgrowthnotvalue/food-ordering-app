@@ -1,4 +1,18 @@
-import { menuArray } from "./data.js";
+import { menuArray } from "./data.js"
+
+let orderList = [];
+
+const foodItem = document.addEventListener("click", function (event) {
+    if (event.target.dataset.plus) {
+        addToOrder(event.target.dataset.plus)
+    }
+})
+
+function addToOrder(e) {
+    console.log(e);
+    console.log(typeof (e))
+}
+
 
 function getMenuItems() {
     let menuItems = '';
@@ -14,11 +28,9 @@ function getMenuItems() {
                 <p class="price">$${item.price}</p>
             </div>    
             <div class="icon">
-                <span>
                     <i class="fa-regular fa-square-plus"
                     data-plus="${item.name}"
                     ></i>
-                </span>
              </div>
         </div>
         <hr>
@@ -28,7 +40,7 @@ function getMenuItems() {
 }
 
 function render() {
-    document.getElementById("menu").innerHTML = getMenuItems();
+    document.querySelector(".menu").innerHTML = getMenuItems();
 }
 
 render()
