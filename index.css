@@ -1,0 +1,60 @@
+body {
+    font-family: 'Smythe', cursive;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.topleft {
+    position: absolute;
+    top: 56px;
+    left: 46px;
+    color: white;
+}
+
+.bg-img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+#title {
+    font-size: 39px;
+    line-height: 16px;
+}
+
+#description {
+    font-size: 23px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.emoji {
+    font-size: 79px;
+}
+
+.name {
+    font-size: 28px;
+}
+
+.ingredients {
+    font-size: 16px;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.icon {
+    font-size: 33px
+}
+
+.item {
+    display: block;
+    width: 300px;
+}
