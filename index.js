@@ -13,9 +13,8 @@ const foodItem = document.addEventListener("click", function (event) {
 function addToOrder(item) {
     for (let member of menuArray) {
         if (member.name === item) {
-            orderArray.push([member.name, member.price])
+            orderArray.push([member.name, member.price]);
             total += member.price;
-
         }
     }
     renderOrder(orderArray);
@@ -26,11 +25,11 @@ function renderOrder(orderArray) {
     orderArray.forEach(item => {
         foodList += `
         <div class="order-item">${item}</div>
-        `
-    });
+        `});
     document.querySelector(".order").innerHTML = foodList + `
     <hr>
-    <div class="total">Total price:${total} </div>`;
+    <div class="total">Total price:$${total} </div>
+    <button class="btn" id="btn">Complete order</button>`;
     console.log(orderArray)
 
 }
@@ -65,4 +64,11 @@ function render() {
 }
 
 render()
+
+const orderBtn = document.getElementById("btn")
+
+orderBtn.addEventListener("click", function () {
+    console.log("text")
+})
+
 
