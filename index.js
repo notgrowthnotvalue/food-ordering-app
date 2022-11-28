@@ -1,6 +1,8 @@
 import { menuArray } from "./data.js"
 
-let orderList = [];
+let orderArray = [];
+let total = 0;
+
 
 const foodItem = document.addEventListener("click", function (event) {
     if (event.target.dataset.plus) {
@@ -8,11 +10,30 @@ const foodItem = document.addEventListener("click", function (event) {
     }
 })
 
-function addToOrder(e) {
-    console.log(e);
-    console.log(typeof (e))
+function addToOrder(item) {
+    for (let member of menuArray) {
+        if (member.name === item) {
+            orderArray.push([member.name, member.price])
+            total += member.price;
+
+        }
+    }
+    renderOrder(orderArray);
 }
 
+function renderOrder(orderArray) {
+    let foodList = '<p id="order-title">Your order</p>';
+    orderArray.forEach(item => {
+        foodList += `
+        <div class="order-item">${item}</div>
+        `
+    });
+    document.querySelector(".order").innerHTML = foodList + `
+    <hr>
+    <div class="total">Total price:${total} </div>`;
+    console.log(orderArray)
+
+}
 
 function getMenuItems() {
     let menuItems = '';
