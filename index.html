@@ -1,40 +1,72 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
     <!-- CSS -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-
-<body>
+  <body>
     <header>
-        <div class>
-            <img src="./images/bg.png" class="bg-img" />
-            <div class="topleft">
-                <h1 id="title">Jimmy's Diner</h1>
-                <h2 id="description">The best burgers and pizzas in town</h2>
-            </div>
+      <div class>
+        <img src="./images/bg.png" class="bg-img" />
+        <div class="topleft">
+          <h1 id="title">Jimmy's Diner</h1>
+          <h2 id="description">The best burgers and pizzas in town</h2>
         </div>
+      </div>
     </header>
 
     <main>
-        <div class="menu">
-            <!-- Menu here! -->
+      <div class="menu">
+        <!-- Menu here! -->
+      </div>
+      <div class="order">
+        <!-- Order goes here -->
+      </div>
+      <div class="modal" id="modal">
+        <div class="close-modal-btn-container">
+          <button class="modal-close-btn" id="modal-close-btn">X</button>
         </div>
-        <div class="order">
-            <!-- Order goes here -->
+        <div class="modal-inner" id="modal-inner">
+          <h2>Enter card details</h2>
+          <form id="consent-form">
+            <div class="input-text">
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Enter your name"
+              />
+              <input
+                type="number"
+                name="cardNumber"
+                placeholder="Enter card number"
+              />
+              <input type="number" name="cvv" placeholder="Enter CVV" />
+            </div>
+            <div class="modal-btn" id="modal-btn">
+              <button type="submit" class="btn" id="pay-btn">Pay</button>
+            </div>
+          </form>
         </div>
+      </div>
     </main>
 
     <script src="index.js" type="module"></script>
-</body>
-
+  </body>
 </html>
